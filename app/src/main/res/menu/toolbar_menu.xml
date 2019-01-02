@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--showAsAction：属性有五个之：ifRoom、never、always、withText、collapseActionView
+    ifRoom：会显示在Item中，但是如果已经有4个一晌的Item时会隐藏在溢出列表中。当然个数并不仅仅局限于四个，包括屏幕的宽窄而定。
+    never：永远不会显示。只在溢出列表中显示，而且只显示标题，所以在定义Item时，最好把标题都带上
+    always：无论是否溢出，总会显示
+    withText：示意ActionBar要显示文本的标题。ActionBar会尽可能的显示这个标题，但是，如果图标有效并且受到ActionBar空间的限制，文本标题就有可能显示不全
+    collapseActionView：声明了这个操作视窗应该被折叠到一个按钮中，当用户选择这个按钮时，这个操作视窗展开。否则，这个操作视窗在默认的情况下是可见的，
+    并且即便在用于不适用的时候，也要占还有操作栏的有效空间，一般要配合ifRoom一起使用才有效
+    -->
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/actionbar_search_icon"
+        android:title="@string/action_search"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView"/>
+
+    <item
+        android:id="@+id/action_group_chat"
+        android:icon="@drawable/menu_group_chat_icon"
+        android:title="@string/menu_group_chat"/>
+    <item
+        android:id="@+id/action_add_friend"
+        android:icon="@drawable/menu_add_icon"
+        android:title="@string/menu_add_friend"/>
+    <item
+        android:id="@+id/action_scan"
+        android:icon="@drawable/men_scan_icon"
+        android:title="@string/menu_scan"/>
+    <item
+        android:id="@+id/action_feedback"
+        android:icon="@drawable/menu_feedback_icon"
+        android:title="@string/menu_feedback"/>
+</menu>
